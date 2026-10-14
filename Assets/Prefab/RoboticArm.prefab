@@ -70,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d1a5903867c8f0a4a8a94c3fe36dad11, type: 2}
+  - {fileID: 2100000, guid: a4b62a69d54e80347bd546999c6d4b9e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -460,7 +460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00599bdc6d157a49839f7f1b6269359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClawContact
-  touching: 0
 --- !u!1 &2214067408776558546
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +809,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: bcddf10b0bacfed4581366562c412d68, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: RoboticArmAgent
@@ -1296,7 +1295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00599bdc6d157a49839f7f1b6269359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClawContact
-  touching: 0
 --- !u!1 &8503588300782280515
 GameObject:
   m_ObjectHideFlags: 0

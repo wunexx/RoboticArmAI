@@ -27,9 +27,12 @@ public class RoboticArmAgent : Agent
     EnvironmentGoalSpawner environmentGoalSpawner;
     EnvironmentUIManager environmentUIManager;
 
-    float prevGripDist, prevGoalDist;
+    float prevGripDist, prevGoalDist, prevPropY;
 
-    float maxReward = float.MinValue;
+    float maxReward = 0;
+    int episode;
+
+    float floorY;
 
     static readonly Key[] positiveKeys = { Key.Q, Key.W, Key.E, Key.R, Key.T, Key.H };
     static readonly Key[] negativeKeys = { Key.A, Key.S, Key.D, Key.F, Key.G, Key.Y };
@@ -41,10 +44,15 @@ public class RoboticArmAgent : Agent
     }
     public override void OnEpisodeBegin()
     {
+        episode++;
+
         environmentGoalSpawner.Spawn();
 
-        claw1.touching = false;
-        claw2.touching = false;
+        floorY = environmentGoalSpawner.Prop.position.y;
+        prevPropY = floorY;
+
+        claw1.ResetContact();
+        claw2.ResetContact();
 
         foreach (var j in joints)
         {
@@ -113,40 +121,54 @@ public class RoboticArmAgent : Agent
 
     void FixedUpdate()
     {
+        if (environmentGoalSpawner == null) return;
+
         if (environmentGoalSpawner.IsPropOutOfReach())
         {
-            AddReward(-1f);
-            EndEpisode();
+            FinishEpisode(-10f);
             return;
         }
 
         Transform prop = environmentGoalSpawner.Prop;
         Transform goal = environmentGoalSpawner.Goal;
 
-        float gripDist = Vector3.Distance(gripPoint.position, prop.position);
-        AddReward((prevGripDist - gripDist) * 0.5f);
-        prevGripDist = gripDist;
-
         bool grabbed = claw1.touching && claw2.touching;
-        if (grabbed) AddReward(0.001f);
+        bool lifted = prop.position.y > floorY + 0.2f;
+
+        float gripDist = Vector3.Distance(gripPoint.position, prop.position);
 
         float goalDist = Vector3.Distance(prop.position, goal.position);
-        if (grabbed) AddReward((prevGoalDist - goalDist) * 1f);
+
+        if (!grabbed) AddReward((prevGripDist - gripDist) * 0.5f);
+        prevGripDist = gripDist;
+
+        if (grabbed && lifted) 
+            AddReward((prevGoalDist - goalDist) * 3f);
         prevGoalDist = goalDist;
 
-        if (goalDist < 0.3f)
+        if (grabbed)
+            AddReward((prop.position.y - prevPropY) * 2f);
+        prevPropY = prop.position.y;
+
+        if (goalDist < 0.6f && grabbed)
         {
-            AddReward(1f);
-            EndEpisode();
+            FinishEpisode(10f);
             return;
         }
 
         AddReward(-1f / MaxStep);
 
+        environmentUIManager.DisplayInfo($"Max Reward: {maxReward}\nCurrent Reward: {GetCumulativeReward()}\nSteps: {StepCount} / {MaxStep}\nEpisode: {episode}");
+    }
+
+    void FinishEpisode(float finalReward = 0f)
+    {
+        AddReward(finalReward);
+
         if (GetCumulativeReward() > maxReward)
             maxReward = GetCumulativeReward();
 
-        environmentUIManager.DisplayInfo($"Max Reward: {maxReward}\nCurrent Reward: {GetCumulativeReward()}\nSteps: {StepCount} / {MaxStep}");
+        EndEpisode();
     }
 
     void RotateJoint(JointInfo j, float input)

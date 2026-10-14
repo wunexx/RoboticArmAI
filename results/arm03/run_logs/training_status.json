@@ -1,0 +1,65 @@
+{
+    "RoboticArmAgent": {
+        "checkpoints": [
+            {
+                "steps": 3499971,
+                "file_path": "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-3499971.onnx",
+                "reward": 22.729949139819965,
+                "creation_time": 1791996471.7909894,
+                "auxillary_file_paths": [
+                    "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-3499971.pt"
+                ]
+            },
+            {
+                "steps": 3999954,
+                "file_path": "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-3999954.onnx",
+                "reward": 19.62862480387968,
+                "creation_time": 1791997062.577922,
+                "auxillary_file_paths": [
+                    "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-3999954.pt"
+                ]
+            },
+            {
+                "steps": 4499974,
+                "file_path": "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-4499974.onnx",
+                "reward": 23.441981090318173,
+                "creation_time": 1791997644.169462,
+                "auxillary_file_paths": [
+                    "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-4499974.pt"
+                ]
+            },
+            {
+                "steps": 4999977,
+                "file_path": "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-4999977.onnx",
+                "reward": 22.982763908217915,
+                "creation_time": 1791998225.481316,
+                "auxillary_file_paths": [
+                    "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-4999977.pt"
+                ]
+            },
+            {
+                "steps": 5000030,
+                "file_path": "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-5000030.onnx",
+                "reward": 22.995040463233316,
+                "creation_time": 1791998225.5337727,
+                "auxillary_file_paths": [
+                    "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-5000030.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5000030,
+            "file_path": "results\\arm03\\RoboticArmAgent.onnx",
+            "reward": 22.995040463233316,
+            "creation_time": 1791998225.5337727,
+            "auxillary_file_paths": [
+                "results\\arm03\\RoboticArmAgent\\RoboticArmAgent-5000030.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.2.0.dev0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

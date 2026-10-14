@@ -2,40 +2,58 @@
     "RoboticArmAgent": {
         "checkpoints": [
             {
-                "steps": 499891,
-                "file_path": "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-499891.onnx",
-                "reward": 1.2477424815297127,
-                "creation_time": 1791850728.9910681,
+                "steps": 999971,
+                "file_path": "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-999971.onnx",
+                "reward": 2.1504468005150557,
+                "creation_time": 1791888203.1984727,
                 "auxillary_file_paths": [
-                    "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-499891.pt"
+                    "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-999971.pt"
                 ]
             },
             {
-                "steps": 999875,
-                "file_path": "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-999875.onnx",
-                "reward": 0.8293115485459566,
-                "creation_time": 1791851322.035438,
+                "steps": 1499998,
+                "file_path": "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-1499998.onnx",
+                "reward": 3.304894173393647,
+                "creation_time": 1791888671.4251664,
                 "auxillary_file_paths": [
-                    "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-999875.pt"
+                    "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-1499998.pt"
                 ]
             },
             {
-                "steps": 1353293,
-                "file_path": "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-1353293.onnx",
-                "reward": 1.429222930488842,
-                "creation_time": 1791851731.904961,
+                "steps": 1999944,
+                "file_path": "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-1999944.onnx",
+                "reward": null,
+                "creation_time": 1791889154.263832,
                 "auxillary_file_paths": [
-                    "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-1353293.pt"
+                    "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-1999944.pt"
+                ]
+            },
+            {
+                "steps": 2499941,
+                "file_path": "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-2499941.onnx",
+                "reward": 8.453776721376926,
+                "creation_time": 1791889663.6076746,
+                "auxillary_file_paths": [
+                    "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-2499941.pt"
+                ]
+            },
+            {
+                "steps": 2578148,
+                "file_path": "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-2578148.onnx",
+                "reward": 13.782680660486221,
+                "creation_time": 1791889742.2850404,
+                "auxillary_file_paths": [
+                    "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-2578148.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1353293,
+            "steps": 2578148,
             "file_path": "results\\arm01\\RoboticArmAgent.onnx",
-            "reward": 1.429222930488842,
-            "creation_time": 1791851731.904961,
+            "reward": 13.782680660486221,
+            "creation_time": 1791889742.2850404,
             "auxillary_file_paths": [
-                "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-1353293.pt"
+                "results\\arm01\\RoboticArmAgent\\RoboticArmAgent-2578148.pt"
             ]
         }
     },

@@ -1,0 +1,65 @@
+{
+    "RoboticArmAgent": {
+        "checkpoints": [
+            {
+                "steps": 3499879,
+                "file_path": "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-3499879.onnx",
+                "reward": 13.972885191440582,
+                "creation_time": 1791901821.8112423,
+                "auxillary_file_paths": [
+                    "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-3499879.pt"
+                ]
+            },
+            {
+                "steps": 3999974,
+                "file_path": "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-3999974.onnx",
+                "reward": 9.818867267005974,
+                "creation_time": 1791902314.4529305,
+                "auxillary_file_paths": [
+                    "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-3999974.pt"
+                ]
+            },
+            {
+                "steps": 4499883,
+                "file_path": "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-4499883.onnx",
+                "reward": 11.516065266999332,
+                "creation_time": 1791902808.3535297,
+                "auxillary_file_paths": [
+                    "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-4499883.pt"
+                ]
+            },
+            {
+                "steps": 4999889,
+                "file_path": "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-4999889.onnx",
+                "reward": null,
+                "creation_time": 1791903301.419192,
+                "auxillary_file_paths": [
+                    "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-4999889.pt"
+                ]
+            },
+            {
+                "steps": 5000017,
+                "file_path": "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-5000017.onnx",
+                "reward": null,
+                "creation_time": 1791903301.4632223,
+                "auxillary_file_paths": [
+                    "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-5000017.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5000017,
+            "file_path": "results\\arm02\\RoboticArmAgent.onnx",
+            "reward": null,
+            "creation_time": 1791903301.4632223,
+            "auxillary_file_paths": [
+                "results\\arm02\\RoboticArmAgent\\RoboticArmAgent-5000017.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.2.0.dev0",
+        "torch_version": "2.2.2+cu121"
+    }
+}
